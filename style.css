@@ -6,10 +6,10 @@ html, body
 {
 position:relative;
 }
-#MainScreen{background-color:black; position:absolute; width:362px; height:273px; left:130px; top: 127px;}
+#MainScreen{background-color:black; position:absolute; width:362px; height:273px; left:122px; top: 119px;}
 body {font-family:arial; sans-serif; }
 .button {position:absolute;}
-#EnergyLevel{background:url("assets/EnergyBackground.png"); width:362px; height:145px; left:130px; top:255px; position: absolute; display: none;}
+#EnergyLevel{background:url("assets/EnergyBackground.png"); width:362px; height:145px; left:122px; top:247px; position: absolute; display: none;}
 .MenuText{color:black;  font-family:Arial; font-weight:bold;}
 #SelectEnergy{margin-top:40px; text-align: center;}
 #JoulesEnergy{text-align: center}
@@ -17,8 +17,8 @@ body {font-family:arial; sans-serif; }
 	background:url("assets/EnergyBackground.png");
 	width:362px; 
 	height:145px; 
-	left:130px; 
-	top:255px; 
+	left:122px; 
+	top:247px; 
 	position: absolute;
 	display:none;
 }
@@ -28,14 +28,14 @@ body {font-family:arial; sans-serif; }
 }
 #ChargeToJoules {display: inline}
 .MenuText{color:black;  font-family:Arial; font-weight:bold;}
-#Disarm {position:absolute; top:83px; left:76px;}
+#Disarm {position:absolute; top:75px; left:68px;}
 
 #ShockMenu {
 	background:url("assets/EnergyBackground.png");
 	width:362px; 
 	height:145px; 
-	left:130px; 
-	top:255px; 
+	left:122px; 
+	top:247px; 
 	position: absolute;
 	display:none;
 
@@ -45,8 +45,8 @@ body {font-family:arial; sans-serif; }
 	background:url("assets/EnergyBackground.png");
 	width:362px; 
 	height:145px; 
-	left:130px; 
-	top:255px; 
+	left:122px; 
+	top:247px; 
 	position: absolute;
 	display:none;
 }
@@ -60,8 +60,8 @@ body {font-family:arial; sans-serif; }
 #ShockAdvised {
 	display: none;
 	font-weight:bold;
-	left:253px;
-	top:288px; 
+	left:245px;
+	top:280px; 
 	position:absolute;
 	color:black;
 	z-index: 100
@@ -76,33 +76,33 @@ body {font-family:arial; sans-serif; }
 	background:url("assets/EnergyBackground.png");
 	width:362px; 
 	height:136px; 
-	left:130px; 
-	top:255px; 
+	left:122px; 
+	top:247px; 
 	position: absolute;
 	display: none;
 }
 .MonitorText {position:absolute; font-family:sans-serif; color:#6EFACB; font-weight: bold}
-#HR {left:138px; top:125px;}
-#HRNum {left:163px; top:125px; font-size:30px;}
-#CurrentJShock {position:absolute; left:290px; top:130px; color:yellow; font-family:sans-serif;}
-#Time {position:absolute; left:270px; top:150px; color:white; font-family:sans-serif;}
+#HR {left:131px; top:117px;}
+#HRNum {left:155px; top:117px; font-size:30px;}
+#CurrentJShock {position:absolute; left:282px; top:128px; color:yellow; font-family:sans-serif;}
+#Time {position:absolute; left:262px; top:142px; color:white; font-family:sans-serif;}
 #TopMonitor {display:none;}
-#Push {position:absolute; top:50px; left:109px;}
+#Push {position:absolute; top:42px; left:101px;}
 #JAvaliable {text-align: center; margin-top:30px;}
-#ShockButtonScreen{position:absolute; left:154px; top:50px; height:35px; }
-#LastWord {position:absolute; top:50px; left:194px;}
+#ShockButtonScreen{position:absolute; left:146px; top:42px; height:35px; }
+#LastWord {position:absolute; top:42px; left:186px;}
 #ShockLoadingBar {
-	top:70px; 
-	left:89px;
+	top:62px; 
+	left:81px;
 	height:14px;
 	width:10px;
 	z-index: 11
 
 }
-#ECGVFib {top:190px; left:130px;}
-#Ticker {top:180px; left:130px;z-index: 101 ; width:10px;}
+#ECGVFib {top:182px; left:122px;}
+#Ticker {top:172px; left:122px;z-index: 101 ; width:10px;}
 
-#Pacer {left:648px; top:350px;}
+#Pacer {left:640px; top:342px;}
 #PacerLight {left:658px; top:361px; display: none;}
 
 #PacerMenu {
