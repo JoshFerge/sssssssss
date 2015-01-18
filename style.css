@@ -7,7 +7,7 @@
 #MainScreen{background-color:black; position:absolute; width:362px; height:273px; left:130px; top: 127px;}
 body {font-family:arial; sans-serif; margin:0px;}
 .button {
-	margin:-5px;
+	margin:-6px;
 }
 html, body {
 	position: relative;
