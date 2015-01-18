@@ -102,15 +102,15 @@ body {font-family:arial; sans-serif; }
 #ECGVFib {top:182px; left:122px;}
 #Ticker {top:172px; left:122px;z-index: 101 ; width:10px;}
 
-#Pacer {left:640px; top:342px;}
+#Pacer {left:640px; top:346px;}
 #PacerLight {left:658px; top:361px; display: none;}
 
 #PacerMenu {
 	background:url("assets/EnergyBackground.png");
 	width:362px; 
 	height:136px;
-	left:130px; 
-	top:259px; 
+	left:122px; 
+	top:251px; 
 	position: absolute;
 	display: none;
 
@@ -121,19 +121,19 @@ body {font-family:arial; sans-serif; }
 #PacerText2 {text-align: center; margin-top:0px; font-size:30px; margin-bottom:0px;}
 #PacerText3 {display:none; text-align: center; margin-top:0px; font-size:30px; position: absolute; top:70px; left:135px;}
 
-#CurrentLeft {left:649px; top:421px;}
-#CurrentRight {left:693px; top:421px;}
-#RateLeft {left:648px; top:385px;}
-#RateRight {left:691px; top:385px;}
+#CurrentLeft {left:641px; top:413px;}
+#CurrentRight {left:685px; top:413px;}
+#RateLeft {left:640px; top:377px;}
+#RateRight {left:683px; top:377px;}
 
 
-#Score {position: absolute; right:100px; top:0; font-family: sans-serif;}
+#Score {position: absolute; right:92px; top:0; font-family: sans-serif;}
 
 
-#AdultDummy {left:820px; top:180px; width:250px; pointer-events:none;}
+#AdultDummy {left:812px; top:172px; width:250px; pointer-events:none;}
 
-#RightTarget {left:936px; top:385px; width:45px; }
-#LeftTarget {left:867px;top:323px; height:40px; width:45px; z-index: -1 }
+#RightTarget {left:928px; top:377px; width:45px; }
+#LeftTarget {left:859px;top:315px; height:40px; width:45px; z-index: -1 }
 
 .dial {position: absolute;}
 
@@ -142,8 +142,8 @@ body {font-family:arial; sans-serif; }
 
 	display: none;
 	z-index: 1000;
-	left:133px;
-	top:179px;
+	left:125px;
+	top:171px;
 	list-style: none;
 	width:70px;
 	height:72px;
@@ -156,38 +156,38 @@ body {font-family:arial; sans-serif; }
 	list-style: none;
 	text-align: center;
 }
-#LeftPad {left:950px; top:500px; width:42px; height:42px; background:url("assets/LeftPad.png"); background-size: 42px 42px; z-index: 1}
-#RightPad {left:1000px; top:500px; width:42px;height:42px; z-index: 4; background:url("assets/RightPad.png"); background-size: 42px 42px; z-index: 30 !important;}
-#CPRButton {left:1080px; top:300px; width:80px; border-radius:3px; padding-top:10px; padding-bottom: 10px; padding-left: 5px; padding-right:5px; background-color:green; color: white; text-align: center; border-radius:3px; padding-top:10px; border:2px solid red;}
+#LeftPad {left:942px; top:492px; width:42px; height:42px; background:url("assets/LeftPad.png"); background-size: 42px 42px; z-index: 1}
+#RightPad {left:992px; top:492px; width:42px;height:42px; z-index: 4; background:url("assets/RightPad.png"); background-size: 42px 42px; z-index: 30 !important;}
+#CPRButton {left:1072px; top:292px; width:80px; border-radius:3px; padding-top:10px; padding-bottom: 10px; padding-left: 5px; padding-right:5px; background-color:green; color: white; text-align: center; border-radius:3px; padding-top:10px; border:2px solid red;}
 #CPRButton:hover {cursor: pointer; cursor: hand;}
-#Assess {left:1080px; top:225px; width:80px; margin-bottom:10px; padding-top:10px; padding-bottom: 10px; padding-left: 5px; padding-right:5px; background-color:#2B28FF; color: white; text-align: center;}
+#Assess {left:1072px; top:217px; width:80px; margin-bottom:10px; padding-top:10px; padding-bottom: 10px; padding-left: 5px; padding-right:5px; background-color:#2B28FF; color: white; text-align: center;}
 #Assess:hover {cursor: pointer; cursor: hand;}
-#CaseDescription {left:1080px; top:145px; width:80px; margin-bottom:10px; padding-top:10px; padding-bottom: 10px; padding-left: 5px; padding-right:5px; background-color:#2B28FF; color: white; text-align: center;}
+#CaseDescription {left:1072px; top:137px; width:80px; margin-bottom:10px; padding-top:10px; padding-bottom: 10px; padding-left: 5px; padding-right:5px; background-color:#2B28FF; color: white; text-align: center;}
 #CaseDescription:hover {cursor: pointer; cursor: hand;}
 
-#CPRStatus {color:red; font-weight: bold; position:absolute; left:820px; top:150px; display:none;}
+#CPRStatus {color:red; font-weight: bold; position:absolute; left:812px; top:142px; display:none;}
 .ui-dialog {width:500px;}
 
-#SpeedDial {left:370px; top:545px; }
+#SpeedDial {left:362px; top:537px; }
 
 
-#ChargingBackground {top:325px; left:218px; z-index: 10; width:190px; height:14px; display: none;}
+#ChargingBackground {top:317px; left:211px; z-index: 10; width:190px; height:14px; display: none;}
 
-#PaddlesX1 {left:140px; top:160px;}
-#Heart {left:137px; top:140px;}
+#PaddlesX1 {left:132px; top:152px;}
+#Heart {left:129px; top:132px;}
 
 
 .TopText {color:yellow;}
-#TopRate {left:146px; top:-9px;}
-#TopAmps {left:300px; top:-9px;}
-#TopDemand {top:-9px; left:2px;}
-#Help {font-size:20px; bottom:50px; right:50px; background-color:red; padding-left:10px; padding-right:10px; padding-top:5px; padding-bottom:5px; border-radius:2px;}
-#e {left:460px; top:81px; width:12px;}
-#FlatLine {left:130px; top:190px;height:55px; width:0px; background:url("assets/Flatline.png");}
-#ChangeRhythm {left:130px; top:180px; width:0px; height:55px; z-index: 10; background:black url("assets/Flatline.png");}
-#CurrentRhythm {left:130px; top:180px; width:355px; height:55px; z-index:0;}
-#PauseButton {left:659px; top:455px;}
-#CaseSelection {position:absolute; left:800px}
+#TopRate {left:138px; top:-17px;}
+#TopAmps {left:292px; top:-17px;}
+#TopDemand {top:-17px; left:-6px;}
+#Help {font-size:20px; bottom:42px; right:42px; background-color:red; padding-left:10px; padding-right:10px; padding-top:5px; padding-bottom:5px; border-radius:2px;}
+#e {left:452px; top:73px; width:12px;}
+#FlatLine {left:122px; top:182px;height:55px; width:0px; background:url("assets/Flatline.png");}
+#ChangeRhythm {left:122px; top:172px; width:0px; height:55px; z-index: 10; background:black url("assets/Flatline.png");}
+#CurrentRhythm {left:122px; top:172px; width:355px; height:55px; z-index:0;}
+#PauseButton {left:651px; top:447px;}
+#CaseSelection {position:absolute; left:792px}
 #CaseSelection li {list-style: none;}
 
 #GrayCable {width:60px; height:40px; background:url("GrayCable.png"); background-size:60px 40px; left:959px; top:608px;z-index: 1 !important; }
