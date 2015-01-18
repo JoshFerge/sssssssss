@@ -444,7 +444,7 @@ $(function () {
 
 				rhythmChange(initp,"black url('assets/DeadLine.png')")		
 
-	}, 600000); //600000  20000
+	}, 60000); //600000  20000
 	
 	
 	document.getElementById("TestPlug").style.left="994px"
@@ -1299,14 +1299,6 @@ $(function () {
      });
 
 	$( "#RightPad" ).draggable({ 
-		scroll:true,
-	   start: function(){
-	      $(this).data("startingScrollTop",$(this).parent().scrollTop());
-	   },
-	   drag: function(event,ui){
-	      var st = parseInt($(this).data("startingScrollTop"));
-	      ui.position.top -= $(this).parent().scrollTop() - st;
-	   },
 
 		snap: "#RightTarget" , 
 		snapMode: "inner" ,
