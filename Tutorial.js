@@ -444,7 +444,7 @@ $(function () {
 
 				rhythmChange(initp,"black url('assets/DeadLine.png')")		
 
-	}, 60000); //600000  20000
+	}, 600000); //600000  20000
 	
 	
 	document.getElementById("TestPlug").style.left="994px"
@@ -1945,7 +1945,7 @@ function caseSelection(caseNum) {
 
 		casePointsTimeDeduction = setTimeout(function() {
 			TestCase1.TotalPoints -= 10
-		},600000);
+		},60000);
 
 
 		document.getElementById('Continue').style.display = "none"
