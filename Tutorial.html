@@ -42,7 +42,7 @@
 		<div id='score'>0</div>
 		<img  id="lifepak" src="assets/lifepak.png" style="position:absolute;left:0px;top:0px;">
 		<img class = "button " id = "OnOff" src="assets/LifePakOnOff.png" style="position:absolute; left:648px; top:139px" onclick="turnOn()">
-		<div id="MainScreen"></div>
+		<div id="MainScreen" class="button" ></div>
 		<img class="button " id ="EnergySelectLeft" src="assets/EnergySelectLeft.png" style="left:648px; top:177px" onclick="energySelectDown()">
 		<img class="button " id ="EnergySelectRight" src="assets/EnergySelectRight.png" style="left:692px; top:177px" onclick="energySelectUp()">
 		<div id="EnergyLevel" ><p class="MenuText" id="SelectEnergy">Select Biphasic Energy</p> <p class="MenuText" id="JoulesEnergy">2J</p></div>
@@ -145,11 +145,11 @@
 			<p class="MenuText" id="PacerText2">100 PPM</p>
 			<p class="MenuText" id="PacerText3">30 mA</p>
 		</div>
-		<div id="TopMonitor" class="button ">
-			<div class="MonitorText" id="HR">HR</div>
-			<div class="MonitorText" id="HRNum">0</div>
-			<div id="CurrentJShock">2J</div>
-			<div id="Time"></div>
+		<div id="TopMonitor" class="button">
+			<div class="MonitorText" class="button" id="HR">HR</div>
+			<div class="MonitorText" class="button" id="HRNum">0</div>
+			<div id="CurrentJShock" class="button">2J</div>
+			<div id="Time" class="button"></div>
 			<img class="button" id="Battery" src="assets/Battery.png" style="left:473px; top:130px">
 			
 			<img class="button" id="Ticker" src="assets/Ticker.png">
