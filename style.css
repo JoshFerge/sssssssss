@@ -181,7 +181,7 @@ html, body {
 #ChargingBackground {top:325px; left:218px; z-index: 10; width:190px; height:14px; display: none;}
 
 #PaddlesX1 {left:140px; top:160px;}
-#Heart {left:137px; top:140px;}
+#Heart {left:137px; top:135px;}
 
 
 .TopText {color:yellow;}
@@ -209,9 +209,9 @@ html, body {
 
 #EKGBox {left:840px; top:50px; height:50px; width: 150px; border:5px solid blue; border-radius:1px;}
 #EKGBoxText {left:840px; top:30px; width:150px;}
-#RAEKG {width:25px; height:25px; background:url('assets/RAEKG.png'); background-size:25px 25px; left:850px; top:70px;  z-index: 1}
-#LLEKG {width:25px; height:25px; background:url('assets/LLEKG.png'); background-size:25px 25px; left:875px; top:70px; z-index: 1}
-#LAEKG {width:25px; height:25px; background:url('assets/LAEKG.png'); background-size:25px 25px; left:900px; top:70px;  z-index: 1}
+#RAEKG {width:25px; height:25px; background:url('assets/RAEKG.png'); background-size:25px 25px; left:870px; top:70px;  z-index: 1}
+#LLEKG {width:25px; height:25px; background:url('assets/LLEKG.png'); background-size:25px 25px; left:903px; top:70px; z-index: 1}
+#LAEKG {width:25px; height:25px; background:url('assets/LAEKG.png'); background-size:25px 25px; left:936px; top:70px;  z-index: 1}
 #RAEKG {cursor: pointer; cursor: hand;}
 #LLEKG {cursor: pointer; cursor: hand;}
 #LAEKG {cursor: pointer; cursor: hand;}
@@ -228,7 +228,7 @@ html, body {
 
 #BottomPaceBar {width:360px; height:20px; left:130px; top:380px; background-color:#242449; display:none;}
 
-#BottomBar {width:360px; height:20px; left:130px; top:380px; background-color:#242449; display:none; z-index: 4000}
+#BottomBar {width:360px; height:20px; left:122px; top:372px; background-color:#242449; display:none; z-index: 4000}
 #BBText {text-align: center;  }
 
 

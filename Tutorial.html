@@ -45,7 +45,7 @@
 		<div id="MainScreen" class="button" ></div>
 		<img class="button " id ="EnergySelectLeft" src="assets/EnergySelectLeft.png" style="left:648px; top:177px" onclick="energySelectDown()">
 		<img class="button " id ="EnergySelectRight" src="assets/EnergySelectRight.png" style="left:692px; top:177px" onclick="energySelectUp()">
-		<div id="EnergyLevel" ><p class="MenuText" id="SelectEnergy">Select Biphasic Energy</p> <p class="MenuText" id="JoulesEnergy">2J</p></div>
+		<div id="EnergyLevel" class="button" ><p class="MenuText" id="SelectEnergy">Select Biphasic Energy</p> <p class="MenuText" id="JoulesEnergy">2J</p></div>
 		<img class="button " id ="Charge" src="assets/Charge.png" style="left:648px; top:212px" onclick="charge()">
 		<img class="button " id ="ShockButton" src="assets/Shock.png" style="left:668px; top:248px" onclick="shock()">
 		<img class="button" id="ShockLight" src="assets/Light.png" style="left:650px; top:267px;">
@@ -61,8 +61,8 @@
 		<img class="button " id="CurrentLeft" src="assets/CurrentLeft.png" onclick="currentLeft()">
 		<img class="button " id="CurrentRight" src="assets/CurrentRight.png" onclick="currentRight()">
 		<img class="button" id="AdultDummy" src="assets/AdultDummy.png" onclick="">
-		<div class="button " id="LeftPad" onclick=""></div>
-		<div class="button " id="RightPad"  onclick=""></div>
+		<div style="position:absolute" id="LeftPad" onclick=""></div>
+		<div style="position:absolute" id="RightPad"  onclick=""></div>
 		<img class="button " id="LeadButton" src="assets/Lead.png" onclick="leadSelect()">
 		<div class="button" id="LeftTarget"></div>
 		<img class="button" id="RightTarget" src="assets/RightPadTarget.png">
@@ -70,7 +70,7 @@
 		<div class="button" id="Assess">Assess Patient</div>
 		<div class="button" id="CaseDescription">Case Description</div>
 		<img class="button " id="SpeedDial" src="assets/SpeedDial.png" onclick="speedDial()">
-		<img class="button" id="ChargingBackground" src="assets/ChargingBackground.png">
+		<img style="position:absolute; margin:-8px" id="ChargingBackground" src="assets/ChargingBackground.png">
 		<img class="button " id="Sync" src="assets/Sync.png" onclick="sync()" style="left:650px; top:305px;">
 		<img class="button" id="SyncLight" src="assets/Light.png" style="left:660px; top:315px; display:none">
 		<div class="button" id="ChangeRhythm"></div>
@@ -80,9 +80,9 @@
 		<img class="button" id="e" src="assets/e.png">
 		<div class="button" id="TherapyCable" ></div>
 		<!-- <div class="button" id="Help">Help</div> -->
-		<div class="button" id="GrayCable"></div>
-		<div class="button" id="WhiteCable"><div class="GraySnap" id="WhiteTarget"></div> </div>
-		<div class="button GraySnap " id="TestPlug"><div class="GraySnap" id="WhiteTarget2"></div></div>
+		<div style="position:absolute" id="GrayCable"></div>
+		<div style="position:absolute" id="WhiteCable"><div class="GraySnap" id="WhiteTarget"></div> </div>
+		<div class=" GraySnap " style="position:absolute" id="TestPlug"><div class="GraySnap" id="WhiteTarget2"></div></div>
 		<div class="button" id="TherapyCableTarget"></div>
 		<div class="button" id="LLEKG"></div>
 		<div class="button" id="RAEKG"></div>
@@ -97,13 +97,13 @@
 		<!-- <img class="button" src="assets/LeftPadTarget.png" id="LeftPadTarget"/>
 		<img class="button" src="assets/RightPadTarg.png" id="RightPadTarg"/> -->
 		<div class="button" id="PatientWeight"></div>
-		<div class="button" id="BottomPaceBar"><p class="button MenuText TopText" id="BottomRate">100 PPM</p>
-			<p class="button MenuText TopText" id="BottomAmps">30 mA</p>
-			<p class="button MenuText TopText" id="BottomDemand">Demand</p>
-			<p class="button MenuText TopText" id="BottomPaused">Paused</p></div>
+		<div class="button" id="BottomPaceBar"><p style="position:absolute;" class=" MenuText TopText" id="BottomRate">100 PPM</p>
+			<p style="position:absolute;" class="MenuText TopText" id="BottomAmps">30 mA</p>
+			<p style="position:absolute;" class="MenuText TopText" id="BottomDemand">Demand</p>
+			<p style="position:absolute;" class="MenuText TopText" id="BottomPaused">Paused</p></div>
 		<div class="button" id="EKGBox"></div>
 		<div class="button" id="EKGBoxText">Lifepak's ECG Leads</div>
-		<div class="button" id="BottomBar"><div class="MenuText TopText" id="BBText"></div></div>
+		<div style="position:absolute" id="BottomBar"><div style="position:absolute" class="MenuText TopText" id="BBText"></div></div>
 		<div class="button" id="RhythmChange"></div>
 		<div class="button" id="RhythmChange2"></div>
 
@@ -121,26 +121,26 @@
 
 		<div id="Charging" class="button ">
 			<p class="MenuText" id="ChargingTo">Charging to </p>
-			<img class="button" id="ShockLoadingBar" src="assets/ShockLoading.png">
+			<img  id="ShockLoadingBar" style="position:absolute; margin:0" src="assets/ShockLoading.png">
 			<p class="MenuText" id="Disarm">Push Speed Dial to Disarm</p>
 
 		</div>
-		<div id="ShockMenu">
+		<div id="ShockMenu" class="button">
 			<p class="MenuText" id="JAvaliable">Available</p> 	
 			<p class="MenuText Inline" id="Push">Push</p><img id="ShockButtonScreen" src="assets/Shock.png"> <p id="LastWord" class="MenuText Inline">Button!</p>
 			<p class="MenuText" id="Disarm">Push Speed Dial to Disarm</p>
 		</div>
-		<div id="EnergyDelivered"><p class="MenuText">Energy Delivered</p></div>
+		<div id="EnergyDelivered" class="button"><p class="MenuText">Energy Delivered</p></div>
 		<div id="ShockAdvised">Shock Advised</div>
-		<div id="AnalyzeMenu">
+		<div id="AnalyzeMenu" class="button">
 			
 			<p class="MenuText" id="AnalyzeText">Analyzing Now -- Stand Clear</p>
 
 		</div>
 		<div id="PacerMenu" class="button ">
-			<p class="button MenuText TopText" id="TopRate">100 PPM</p>
-			<p class="button MenuText TopText" id="TopAmps">30 mA</p>
-			<p class="button MenuText TopText" id="TopDemand">Demand</p>
+			<p class=" MenuText TopText" id="TopRate" style="position:absolute">100 PPM</p>
+			<p class=" MenuText TopText" id="TopAmps" style="position:absolute">30 mA</p>
+			<p class=" MenuText TopText" id="TopDemand" style="position:absolute">Demand</p>
 			<p class="MenuText" id="PacerText">Rate</p>
 			<p class="MenuText" id="PacerText2">100 PPM</p>
 			<p class="MenuText" id="PacerText3">30 mA</p>
@@ -148,13 +148,13 @@
 		<div id="TopMonitor" class="button">
 			<div class="MonitorText" class="button" id="HR">HR</div>
 			<div class="MonitorText" class="button" id="HRNum">0</div>
-			<div id="CurrentJShock" class="button">2J</div>
-			<div id="Time" class="button"></div>
-			<img class="button" id="Battery" src="assets/Battery.png" style="left:473px; top:130px">
+			<div id="CurrentJShock" style="position:absolute">2J</div>
+			<div id="Time" style="position:absolute"></div>
+			<img id="Battery" src="assets/Battery.png" style="left:473px; top:130px; position:absolute">
 			
-			<img class="button" id="Ticker" src="assets/Ticker.png">
+			<img class="button" id="Ticker" style="margin:0" src="assets/Ticker.png">
 			<img class="button" id="PaddlesX1" src="assets/PaddlesX1.png">
-			<img class="button" id="Heart" src="assets/Heart.png">
+			<img style="position:absolute" id="Heart" src="assets/Heart.png">
 		</div>
 
 		

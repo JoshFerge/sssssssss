@@ -3383,7 +3383,7 @@ function pacer() {
 			document.getElementById("BBText").innerHTML = "Pacing Off"
 			
 			document.getElementById("BottomBar").style.display = "block"
-			setTimeout(function() {document.getElementById("BottomBar").style.display = "none";console.log("SAYWHAAA")},10000)
+			setTimeout(function() {document.getElementById("BottomBar").style.display = "none";},10000)
 			document.getElementById("LeadSelect").innerHTML = "<ul><li id=\"Paddles\">Paddles</li><li>I</li><li>II</li><li>III</li></ul>"
 			isPacerOn = false;
 			document.getElementById("PacerLight").style.display = "none";
