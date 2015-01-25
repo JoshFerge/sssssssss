@@ -24,7 +24,6 @@ var isLeadSelectOn = false;
 var patientState = "VTac"
 var isCharging = false;
 var heartRate = 98
-var boolHelper = true;
 var isFirstRun = true;
 var leadNum = 1;
 var TickVar = null;
@@ -246,16 +245,16 @@ function showMeHow() {
 
 	if (isRAEKGConnected&&isLAEKGConnected&&isLLEKGConnected) {
 		$( "#LAEKG" ).animate({
-			"left":"1308px",
-			"top":"320px"
+			"left":"946px",
+			"top":"70px"
 		});
 		$( "#LLEKG" ).animate({
-			"left":"1275px",
-			"top":"320px"
+			"left":"913px",
+			"top":"70px"
 		});
 		$( "#RAEKG" ).animate({
-			"left":"1243px",
-			"top":"320px"
+			"left":"880px",
+			"top":"70px"
 		});
 		isRAEKGConnected = false;
 		isLAEKGConnected = false;
@@ -723,7 +722,6 @@ $(function () {
 					rhythmChange(initp,"black url('assets/NormalRate.png')")
 					clearTimeout(casePointsTimeDeduction);
 					clearTimeout(MinDeathTimeout);
-					console.log("HELGLGLGLL")
 					isSyncOn = false;
 					clearInterval(document.syncInterval);
 					document.getElementById("SyncLight").style.display = "none"
@@ -756,8 +754,10 @@ $(function () {
 		else if ((patientState == "VTac"|| patientState=="Sync")&&isTestOn&&chargeJoules > 84&&isShockReady) {
 				TestCase2.DeathStateReached = true;
 				TestCase2.ShockWithEnergyGreaterThan84 = true;
-				patientState="Dead"
-
+				patientState="Dead";
+				if (!isSyncOn) {
+					TestCase2.ShockWithoutSync = true;
+				}
 				TestCase2.SurvivalStateReached = false;
 				TestCase2.TotalCaseTime = Math.round((new Date() / 1000) - startTime);
 				TestCase2.TotalPoints-=100;
@@ -803,6 +803,7 @@ $(function () {
 
 			
 			else if (patientState == "VTac"&&isTestOn&&!isSyncOn&&isShockReady) {
+
 				othershockbool = false;
 				TestCase2.ShockWithoutSync = true;
 				TestCase2.VFibStateEntered = true;
@@ -2782,7 +2783,7 @@ function charge() {
 		document.LoadingInterval = setInterval(
 			function() {
 				if (parseInt(document.getElementById('ShockLoadingBar').style.width) < 190) {
-					IntervalHelp +=1
+					IntervalHelp +=2
 					document.getElementById('ShockLoadingBar').style.width = IntervalHelp+"px";
 				}
 				else {
@@ -2815,7 +2816,7 @@ function charge() {
 						}, 600);
 
 				}
-			},fchargeJoules/9)
+			},fchargeJoules/4.5)
 
 
 		

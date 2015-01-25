@@ -207,11 +207,11 @@ html, body {
 #TherapyCableTarget {left:503px;top:562px; height:40px; width:45px; z-index: -1 }
 #EKGConnector {width: 250px; height:100px; left:-62px; top:573px; background:url("assets/EKGConnector.png"); background-size: 250px 100px;  z-index: 2 !important;}
 
-#EKGBox {left:840px; top:50px; height:50px; width: 150px; border:5px solid blue; border-radius:1px;}
-#EKGBoxText {left:840px; top:30px; width:150px;}
-#RAEKG {width:25px; height:25px; background:url('assets/RAEKG.png'); background-size:25px 25px; left:870px; top:70px;  z-index: 1}
-#LLEKG {width:25px; height:25px; background:url('assets/LLEKG.png'); background-size:25px 25px; left:903px; top:70px; z-index: 1}
-#LAEKG {width:25px; height:25px; background:url('assets/LAEKG.png'); background-size:25px 25px; left:936px; top:70px;  z-index: 1}
+#EKGBox {left:850px; top:50px; height:50px; width: 150px; border:5px solid blue; border-radius:1px;}
+#EKGBoxText {left:850px; top:30px; width:150px;}
+#RAEKG {width:25px; height:25px; background:url('assets/RAEKG.png'); background-size:25px 25px; left:880px; top:70px;  z-index: 1}
+#LLEKG {width:25px; height:25px; background:url('assets/LLEKG.png'); background-size:25px 25px; left:913px; top:70px; z-index: 1}
+#LAEKG {width:25px; height:25px; background:url('assets/LAEKG.png'); background-size:25px 25px; left:946px; top:70px;  z-index: 1}
 #RAEKG {cursor: pointer; cursor: hand;}
 #LLEKG {cursor: pointer; cursor: hand;}
 #LAEKG {cursor: pointer; cursor: hand;}

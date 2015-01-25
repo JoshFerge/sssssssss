@@ -38,7 +38,25 @@ Please be advised:
 
 
 
+	<script type="text/javascript">
+            var parseQueryString = function () {
 
+                var str = window.location.search;
+                var objURL = {};
+
+                str.replace(
+                    new RegExp("([^?=&]+)(=([^&]*))?", "g"),
+                    function ($0, $1, $2, $3) {
+                        objURL[$1] = $3;
+                    }
+                );
+                return objURL;
+            };
+            var params = parseQueryString();
+
+            var cont = document.getElementById('introA');
+            cont.setAttribute("href", 'Tutorial.html?testnum=4&user=' + params['user']);
+    </script>
 
 
 

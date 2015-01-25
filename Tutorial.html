@@ -131,7 +131,7 @@
 			<p class="MenuText" id="Disarm">Push Speed Dial to Disarm</p>
 		</div>
 		<div id="EnergyDelivered" class="button"><p class="MenuText">Energy Delivered</p></div>
-		<div id="ShockAdvised">Shock Advised</div>
+		<div id="ShockAdvised" class="button">Shock Advised</div>
 		<div id="AnalyzeMenu" class="button">
 			
 			<p class="MenuText" id="AnalyzeText">Analyzing Now -- Stand Clear</p>
@@ -198,6 +198,32 @@
 		<form action="demo_form.asp" method="post">
 		<input id="hidden_field" name="hidden_field" type="hidden" value="123" />
 		</form>
+
+        <script type="text/javascript">
+            var parseQueryString = function () {
+
+                var str = window.location.search;
+                var objURL = {};
+
+                str.replace(
+                    new RegExp("([^?=&]+)(=([^&]*))?", "g"),
+                    function ($0, $1, $2, $3) {
+                        objURL[$1] = $3;
+                    }
+                );
+                return objURL;
+            };
+            var params = parseQueryString();
+
+            var cont = document.getElementById('lnkContinueTut');
+            var back = document.getElementById('lnkBack');
+            cont.setAttribute("href", 'Tutorial.html?testnum=1&user=' + params['user']);
+            back.setAttribute("href", 'Index.html?user=' + params['user']);
+        </script>
+
+
+
+		
 
 	</body>
 </html>
