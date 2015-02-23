@@ -118,23 +118,23 @@ function transformMiliseconds(t){
 
 
 //ticker function that will refresh our display every second
- function tick1(){
+ function tick1() {
   var newd = new Date();
   document.getElementById('time_ticker').innerHTML = transformMiliseconds(newd-tickTime);
-  document.getElementById('score').innerHTML = TestCase1.TotalPoints
+  document.getElementById('score').innerHTML = TestCase1.TotalPoints;
 
  }
- function tick2(){
+ function tick2() {
   var newd = new Date();
   document.getElementById('time_ticker').innerHTML = transformMiliseconds(newd-tickTime);
-  document.getElementById('score').innerHTML = TestCase2.TotalPoints
+  document.getElementById('score').innerHTML = TestCase2.TotalPoints;
   
  }
  
- function tick3(){
+ function tick3() {
   var newd = new Date();
   document.getElementById('time_ticker').innerHTML = transformMiliseconds(newd-tickTime);
-  document.getElementById('score').innerHTML = TestCase3.TotalPoints
+  document.getElementById('score').innerHTML = TestCase3.TotalPoints;
   
  }
  
@@ -292,7 +292,6 @@ function showMeHow() {
 }
 
 function showMeHow2() {
-
 	if (isLeftPadConnected&&isRightPadConnected) {
 		instance.animate($( "#LeftPad" ),{
 			"left":"1000px",
@@ -304,23 +303,16 @@ function showMeHow2() {
 		});
 		instance.animate($("#GrayCable"),{"left":"820px","top":"548px"})
 		instance.animate($("#TherapyCable"),{"left":"548px","top":"561px"})
-		// $( "#GrayCable" ).animate({
-		// 	"left":"820px",
-		// 	"top":"548px"
-		// });
 		isLeftPadConnected = false;
 	   	isRightPadConnected = false;
 	   	isElectrodesConnected = true;
 	   	isTherapyCableAttached = true;
 	   	isTestPlugAttached = false;
 	   	document.getElementById('RemoveTestPlug').style.display = "none"
-
-
 	   	ecgController();
 
 	}
 	else {
-
 		instance.animate($( "#LeftPad" ),{
 			"left":"846px",
 			"top":"379px"
@@ -361,9 +353,7 @@ $(function () {
 						    this.currentTime = 0;
 						    this.play();
 						}, false);
-
 	MinDeathTimeout = setTimeout(function() {
-
 				if (GetUrlValue('testnum')==4) {
 					TestCase1.DeathStateReached = true;
 					document.getElementById("PatientInfo").innerHTML = "Unfortunately the baby has died. You will need to speak with the family. Please review VF management and repeat the VF cases on the simulator another time. <a href=\"Tutorial.html?testnum=5&sess=" + DefibSession.Id + "&user=" + DefibSession.UserId + "\"> Click here to advance to the next test case.</a>"
@@ -444,8 +434,6 @@ $(function () {
 				rhythmChange(initp,"black url('assets/DeadLine.png')")		
 
 	}, 600000); //600000  20000
-	
-	
 	document.getElementById("TestPlug").style.left="994px"
 	document.getElementById("TestPlug").style.top="613px"
 	document.getElementById("GrayCable").style.left="959px"
@@ -2915,7 +2903,7 @@ function shock() {
 
 	dataLogString += "Shock "
 	if (on&&patientState!="Sync"&&patientState!="VTac"&&isLeftPadConnected&&isRightPadConnected&&othershockbool&&isElectrodesConnected&&isShockReady&&!isCPROn) {
-		isAEDOn = false;
+		
 		
 
 		// document.getElementById('shockprompt').addEventListener('ended', function() {
@@ -2927,6 +2915,7 @@ function shock() {
 
 		if (isShockReady&&(!isCPROn)) {
 			if (GetUrlValue('testnum') == 4 && isAEDOn) {
+				console.log('baconman')
 				TestCase1.ShockInAnalyze = true;
 			}
 			if (GetUrlValue('testnum') == 5 && isAEDOn) {
@@ -2936,7 +2925,7 @@ function shock() {
 				TestCase2.ShockInAnalyze = true;
 			}
 			}
-
+			isAEDOn = false;
 
 			document.getElementById("ShockLight").style.display = "none";
 			clearInterval(document.interval);
@@ -3050,6 +3039,12 @@ function shock() {
 				if (TestCase1.TotalCaseTime < 60*2) {
 				TestCase1.CaseTimeLessThan2Min = true;
 				}
+
+				
+			
+			
+
+
 
 				TestCase1.TotalPoints = TestCase1.TotalPoints - 100
 				TestCase1.DeathStateReached = true;
@@ -3808,10 +3803,7 @@ function sync() {
 				}
 				document.getElementById('SyncLight').style.display = "block";
 				document.syncInterval = setInterval(function() {$('#SyncLight').toggle()},1200);
-				
-				patientState = "Sync"
-
-
+				patientState = "Sync";
 				if (isTestOn&&isLeftPadConnected&&isRightPadConnected&&isElectrodesConnected&&leadStatus=="Paddles") {
 					rhythmChange(initp,"black url('assets/SVTsync.png')")
 				}
@@ -3825,10 +3817,6 @@ function sync() {
 				else if (!isTestOn&&isLAEKGConnected&&isRAEKGConnected&&isLLEKGConnected&&leadStatus!="Paddles") {
 				rhythmChange(initp,"black url('assets/SyncRhythm.png')")
 				}
-
-
-
-
 			}
 			else {
 				patientState = "VTac"
@@ -3892,23 +3880,18 @@ function ecgController() {
 
 	if (leadStatus=="Paddles") {
 		if(isRightPadConnected&&isLeftPadConnected&&on&&isElectrodesConnected&&isTherapyCableAttached) {
-
-			
-
-
 			if (patientState == "VTac"&&!isTestOn) {
-				heartRate = 180
-
+				heartRate = 180;
 				rhythmChange(initp,"black url('assets/vtac.png')")
-				helpController(206)
-				helpController(205)
+				helpController(206);
+				helpController(205);
 			}
 			if (patientState == "VTac"&&isTestOn) {
-				heartRate = 224
+				heartRate = 224;
 
 				rhythmChange(initp,"black url('assets/SVT.png')")
-				helpController(206)
-				helpController(205)
+				helpController(206);
+				helpController(205);
 			}
 
 
@@ -3922,21 +3905,19 @@ function ecgController() {
 
 
 			if (patientState == "MouseOver") {
-				heartRate = 80
-
+				heartRate = 80;
 				rhythmChange(initp,"black url('assets/NormalRate.png')")
 			}
 			if (patientState == "VFib") {
-				heartRate = 175
+				heartRate = 175;
 				rhythmChange(initp,"black url('assets/vfib.png')")
 				helpController(3);
 				helpController(4);
 			}
 			if (patientState == "SlowRhythm") {
-				heartRate = 46
-				rhythmChange(initp,"black url('assets/SlowRhythm.png')")
-				helpController(104)
-			
+				heartRate = 46;
+				rhythmChange(initp,"black url('assets/SlowRhythm.png')");
+				helpController(104);
 			}
 
 			if (patientState == "Dead") {
@@ -3974,17 +3955,12 @@ function ecgController() {
 			document.getElementById("HRNum").style.top = "119px"
 
 			clearInterval(heartBeat);
-			heartBeat = null
-			
-
-
+			heartBeat = null;
 		}
 		else {
 			document.getElementById("Heart").style.display = "none";
 			clearInterval(heartBeat);
 			rhythmChange(initp,"black url('assets/Flatline.png')");
-			
-			
 		}
 
 	
@@ -3994,16 +3970,11 @@ function ecgController() {
 		document.getElementById("BottomBar").style.display ="none";
 	}
 }
-
-
 function closez() {
 	document.getElementById('HelpBox').style.display="none";
 }
-
-
 function threeEKGController() {
 	var ekgson = isLLEKGConnected&&isRAEKGConnected&&isLAEKGConnected&&isECGStumpAttached;
-
 	if (ekgson) {
 		document.getElementById('EKGBox').style.display = "none"
 		document.getElementById('EKGBoxText').style.display = "none"
@@ -4012,37 +3983,35 @@ function threeEKGController() {
 			TestCase3.TimeToECGLeadsPlaced = Math.round((new Date() / 1000) - startTime)
 		}
 	}
-
 	if (ispacerFuncOn&&patientState=="SlowRhythm"&&isLLEKGConnected&&isLAEKGConnected&&isRAEKGConnected&&isECGStumpAttached) {
 			helpController(110)
 			if (PacerCurrent == 30) {
 
-				rhythmChange(initp,"black url('assets/30mAPace.png')")
+				rhythmChange(initp,"black url('assets/30mAPace.png')");
 				return;
-
 			}
 			if (PacerCurrent >= 40) {
-				rhythmChange(initp,"black url('assets/40mAPace.png')")
+				rhythmChange(initp,"black url('assets/40mAPace.png')");
 				return;
 			}
 			if (PacerCurrent >= 50) {
-				rhythmChange(initp,"black url('assets/50mAPace.png')")
+				rhythmChange(initp,"black url('assets/50mAPace.png')");
 				return;
 			}
 			if (PacerCurrent >= 60) {
-				rhythmChange(initp,"black url('assets/60mAPace.png')")
+				rhythmChange(initp,"black url('assets/60mAPace.png')");
 				return;
 			}
 			if (PacerCurrent >= 70) {
-				rhythmChange(initp,"black url('assets/70mAPace.png')")
+				rhythmChange(initp,"black url('assets/70mAPace.png')");
 				return;
 
 			}
 			if (PacerCurrent >= 80) {
-				rhythmChange(initp,"black url('assets/PaceRightRhythm.png')")
+				rhythmChange(initp,"black url('assets/PaceRightRhythm.png')");
 
-				patientState = "GoodWithPace"
-				helpController(113)
+				patientState = "GoodWithPace";
+				helpController(113);
 				return;
 				
 			}
@@ -4081,58 +4050,53 @@ function threeEKGController() {
 				else {
 					rhythmChange(initp,"black url('assets/"+(leadNum-1)+".png')")	
 				}
-			
-
-
 			}
 		}
 		else {
-			
 			rhythmChange(initp,"black url('assets/Flatline.png')")
 			console.log(document.bcapsule)
 			console.log(document.ccapsule)
 		}
 	}
-	else {
-		
+	else {	
 		if(isRightPadConnected&&isLeftPadConnected&&on&&isElectrodesConnected) {
 			if (patientState == "MouseOver") {
-				heartRate = 80
-				rhythmChange(initp,"black url('assets/NormalRate.png')")
+				heartRate = 80;
+				rhythmChange(initp,"black url('assets/NormalRate.png')");
 			}
 
 			if (patientState == "VTac"&&!isTestOn) {
-				heartRate = 180
-				rhythmChange(initp,"black url('assets/vtac.png')")
+				heartRate = 180;
+				rhythmChange(initp,"black url('assets/vtac.png')");
 			}
 
 			if (patientState == "VTac"&&isTestOn) {
-				heartRate = 220
-				rhythmChange(initp,"black url('assets/SVT.png')")
+				heartRate = 220;
+				rhythmChange(initp,"black url('assets/SVT.png')");
 			}
 
 
 			if (patientState == "NormalVFib") {
-				heartRate = 180
-				rhythmChange(initp,"black url('assets/NormalRate.png')")
+				heartRate = 180;
+				rhythmChange(initp,"black url('assets/NormalRate.png')");
 			}
 			if (patientState == "VFib") {
-				heartRate = 175
-				rhythmChange(initp,"black url('assets/vfib.png')")
+				heartRate = 175;
+				rhythmChange(initp,"black url('assets/vfib.png')");
 			}
 
 			if (patientState == "MouseOver") {
-				heartRate = 175
-				rhythmChange(initp,"black url('assets/NormalRate.png')")
+				heartRate = 175;
+				rhythmChange(initp,"black url('assets/NormalRate.png')");
 			}
 			if (patientState == "SlowRhythm") {
-				heartRate = 46
-				rhythmChange(initp,"black url('assets/SlowRhythm.png')")
+				heartRate = 46;
+				rhythmChange(initp,"black url('assets/SlowRhythm.png')");
 
 				if (ekgson) {
 					if (patientState == "SlowRhythm") {
-						helpController(105)
-						helpController(106)
+						helpController(105);
+						helpController(106);
 					}
 				}
 			
@@ -4142,18 +4106,7 @@ function threeEKGController() {
 			rhythmChange(initp,"black url('assets/Flatline.png')")
 		}
 	}
-
-
 }
-
-
-
-
-
-
-
-
-
 function helpController(helpState) {
 	if (!isTestOn&&GetUrlValue('testnum')!=0) {
 		var status;
@@ -4308,10 +4261,6 @@ if (status2!=undefined) {
 
 	}
 }
-
-
-
-
 function errorController(errornum) {
 	switch(errornum) {
 		case -1:
