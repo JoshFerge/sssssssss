@@ -104,6 +104,9 @@ var parseQueryString = function () {
 };
 var params = parseQueryString();
 
+if (DefibSession.UserId == '' && params['user'] != '') {
+    DefibSession.UserId = params['user'];
+}
 
 function transformMiliseconds(t){
   var h = Math.floor((t/(1000*60*60))%24);
@@ -294,11 +297,11 @@ function showMeHow() {
 function showMeHow2() {
 	if (isLeftPadConnected&&isRightPadConnected) {
 		instance.animate($( "#LeftPad" ),{
-			"left":"1000px",
+			"left":"950px",
 			"top":"500px"
 		});
 		instance.animate($( "#RightPad" ),{
-			"left":"950px",
+			"left":"1000px",
 			"top":"500px"
 		});
 		instance.animate($("#GrayCable"),{"left":"820px","top":"548px"})
@@ -314,12 +317,12 @@ function showMeHow2() {
 	}
 	else {
 		instance.animate($( "#LeftPad" ),{
-			"left":"846px",
-			"top":"379px"
+			"left":"838px",
+			"top":"371px"
 		});
 		instance.animate($( "#RightPad" ),{
-			"left":"952px",
-			"top":"396px"
+			"left":"947px",
+			"top":"390px"
 		});
 		instance.animate($("#GrayCable"),{"left":"820px","top":"548px"})
 		instance.animate($("#TherapyCable"),{"left":"548px","top":"561px"})
@@ -433,7 +436,7 @@ $(function () {
 
 				rhythmChange(initp,"black url('assets/DeadLine.png')")		
 
-	}, 600000); //600000  20000
+	}, 30000); //600000  20000
 	document.getElementById("TestPlug").style.left="994px"
 	document.getElementById("TestPlug").style.top="613px"
 	document.getElementById("GrayCable").style.left="959px"
@@ -750,6 +753,7 @@ $(function () {
 				TestCase2.TotalCaseTime = Math.round((new Date() / 1000) - startTime);
 				TestCase2.TotalPoints-=100;
 				clearTimeout(casePointsTimeDeduction); 
+				clearTimeout(MinDeathTimeout);
 
 				if (TestCase2.TotalCaseTime > 60*4) {
 				TestCase2.CaseTimeMoreThanFourMin = true;
@@ -3051,6 +3055,7 @@ function shock() {
 				TestCase1.ShocKWithEnergyGreaterThan59 = true;
 				patientState="Dead"
 				clearTimeout(casePointsTimeDeduction); 
+				clearTimeout(MinDeathTimeout);
 
 				HRNum = 0;
 				document.getElementById('HRNum').innerHTML = HRNum;
@@ -3243,10 +3248,10 @@ function analyze() {
 		if (isCPROn) {
 			
 			setTimeout(function() {
-				
-				document.getElementById('motiondetected').play()
-				document.getElementById('AnalyzeText').innerHTML = "Motion Detected -- Stop Motion"
-				
+				if (isCPROn) {
+					document.getElementById('motiondetected').play()
+					document.getElementById('AnalyzeText').innerHTML = "Motion Detected -- Stop Motion"
+				}
 
 			}
 			,5000)

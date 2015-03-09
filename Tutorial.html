@@ -31,7 +31,7 @@
 		<audio id="removetestplug" src="assets/audio/removetestplug.mp3"> </audio>
 		<audio id="motiondetected" src="assets/audio/motiondetected.mp3"> </audio>
 		<audio id="connectelectrodes" src="assets/audio/connectelectrodes.mp3"> </audio>
-		<div class="button" style="z-index:1000" id="back"><a href="index.html" style="z-index:1000">&#60; Back</a></div>
+		<div class="button" style="z-index:1000" id="back"><a id="lnkBack" href="index.html" style="z-index:1000">&#60; Back</a>
 
 
 		<div id='time_ticker_label'>Time:</div>
@@ -193,7 +193,7 @@
 		<img class="button" id="EKGPort" src="assets/RightPadTarget.png"></div>
 		<img class="button" id="TherapyPort" src="assets/RightPadTarget.png"></div>
 
-		<div class="button" id="Continue"><a href="Tutorial.html?testnum=1">Continue to Tutorial Cases</a></div>
+		<div class="button" id="Continue"><a id="lnkContinueTut" href="Tutorial.html?testnum=1">Continue to Tutorial Cases</a></div>
 		<div class="button" id="HelpBox"><div id="HelpTitle"><p>What next?</p><div id="Close" onclick="closez()">close</div></div><div id="HelpInfo">The modules contained in this simulator focus exclusively on how to use the defibrillator. You will not be required to administer medications during case management.<br><br>On this page, use your mouse or touchpad to hover the cursor over the defibrillator's buttons, cables, pads, and ECG leads. Start with the defibrillator's ON button and proceed in your usual order. Remember to hover over the pads, cables, and leads.<br><br>After you are finished with this module, click "Continue to Tutorial Cases" to move on.</div></div>
 		<form action="demo_form.asp" method="post">
 		<input id="hidden_field" name="hidden_field" type="hidden" value="123" />
