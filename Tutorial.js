@@ -89,24 +89,24 @@ TestCase1.SessionDate = today;
 var startTime = new Date() / 1000;
 var tickTime = new Date();
 
-// var parseQueryString = function () {
+var parseQueryString = function () {
 
-//     var str = window.location.search;
-//     var objURL = {};
+    var str = window.location.search;
+    var objURL = {};
 
-//     str.replace(
-//         new RegExp("([^?=&]+)(=([^&]*))?", "g"),
-//         function ($0, $1, $2, $3) {
-//             objURL[$1] = $3;
-//         }
-//     );
-//     return objURL;
-// };
-// var params = parseQueryString();
+    str.replace(
+        new RegExp("([^?=&]+)(=([^&]*))?", "g"),
+        function ($0, $1, $2, $3) {
+            objURL[$1] = $3;
+        }
+    );
+    return objURL;
+};
+var params = parseQueryString();
 
-// if (DefibSession.UserId == '' && params['user'] != '') {
-//     DefibSession.UserId = params['user'];
-// }
+if (DefibSession.UserId == '' && params['user'] != '') {
+    DefibSession.UserId = params['user'];
+}
 
 function transformMiliseconds(t){
   var h = Math.floor((t/(1000*60*60))%24);
