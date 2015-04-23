@@ -166,7 +166,7 @@ function GetUrlValue(VarSearch){
 
 
 function sendPostData(data) {
-    alert('NOTE: This is for debugging purposes.\nIf you see this message then sendPostData was called\nand we will try to log the results now.');
+    // alert('NOTE: This is for debugging purposes.\nIf you see this message then sendPostData was called\nand we will try to log the results now.');
 
     var sessId = params["sess"];
     if (sessId && sessId > 1)
